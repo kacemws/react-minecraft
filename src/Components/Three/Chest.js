@@ -9,22 +9,15 @@ import { useGLTF } from "@react-three/drei/useGLTF";
 import { useSpring, a } from "react-spring/three";
 
 import chestOpenSound from "../../Assets/Audio/open-chest.mp3";
-import chestCloseSound from "../../Assets/Audio/close-chest.mp3";
 
 const openChest = new Audio(chestOpenSound);
-const closeChest = new Audio(chestCloseSound);
 
 export default function Model(props) {
   const handleOpen = () => {
     const aux = props.open;
     props.setOpen(!aux);
-    if (aux) {
-      openChest.volume = 0.3;
-      openChest.play();
-    } else {
-      closeChest.volume = 0.3;
-      closeChest.play();
-    }
+    openChest.volume = 0.3;
+    openChest.play();
   };
   const openChestAnimation = useSpring({
     rotation: props.open ? [0, 0, 0] : [1.61, 0, 0],

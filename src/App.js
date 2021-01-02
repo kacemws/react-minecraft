@@ -3,6 +3,7 @@ import { Canvas, useFrame, useThree } from "react-three-fiber";
 import { OrbitControls, softShadows, Loader } from "@react-three/drei";
 import { useSpring } from "react-spring";
 import Chest from "./Components/Three/Chest";
+import ChestModal from "./Components/ChestModal";
 
 import "./Assets/Style/App.scss";
 import { Suspense, useRef, useState } from "react";
@@ -64,6 +65,7 @@ function App() {
         {/* Allows us to move the canvas around for different prespectives */}
       </Canvas>
       <Loader />
+      <ChestModal open={open} setOpen={setOpen} />
     </>
   );
 }
