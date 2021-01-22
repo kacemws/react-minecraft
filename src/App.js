@@ -6,7 +6,7 @@ import Chest from "./Components/Three/Chest";
 import ChestModal from "./Components/ChestModal";
 
 import "./Assets/Style/App.scss";
-import { Suspense, useRef, useState } from "react";
+import React, { Suspense, useRef, useState } from "react";
 import Lights from "./Components/Three/Lights";
 import Floor from "./Components/Three/Floor";
 

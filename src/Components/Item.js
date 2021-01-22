@@ -25,7 +25,7 @@ const Item = ({ item, position, inventoryType }) => {
           opacity: isDragging ? 0 : 1,
         }}
       >
-        <img src={itemVisual.default} alt="alt" />
+        <img src={itemVisual} alt="alt" />
       </div>
     </>
   );
